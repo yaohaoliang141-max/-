@@ -1,0 +1,6 @@
+{
+  "name": "短视频爆款标题生成器",
+  "description": "基于抖音、B站和金融专业级规则的跨平台短视频爆款标题与封面大字智能生成工具，支持双栏实时生成和差异化场景微调。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
