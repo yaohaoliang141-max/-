@@ -1,20 +1,78 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Matrix Headlines — 短视频爆款标题生成器
 
-# Run and deploy your AI Studio app
+> 基于 Gemini AI 的短视频跨平台爆款标题矩阵生成工具，专为财经 / 硬科普内容创作者打造。
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/a95aa05d-c621-488b-b9b4-1d834ba85fa0
+## ✨ 功能特色
 
-## Run Locally
+- **三端标题矩阵**：同时为抖音、B站、金融专业号生成风格迥异的标题，一键适配不同受众
+- **封面大字联动**：每条标题附带封面贴字建议，满足短视频封面文字极简设计需求
+- **多维参数调控**
+  - 宏观/地缘触发词注入（如"中东原油禁运"）
+  - 核心数字锚点强化（如"695元历史价差"）
+  - 敏感词屏蔽 / 强制合规词
+  - 受众智识层级切换（大众痛点 / B站硬核 / 机构交易员）
+- **实时封面沙盘**：在线预览 4 种封面主题（矿砂 / 霓虹 / 亮黄 / 荧绿），所见即所得
+- **本地历史记录**：生成结果自动存入 localStorage，支持随时回溯加载
+- **实战模板预设**：内置多个期货大宗 / 财经解析场景模板，一键加载直接生成
 
-**Prerequisites:**  Node.js
+---
 
+## 🛠 技术栈
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+| 层级 | 技术 |
+|------|------|
+| 前端框架 | React 18 + TypeScript |
+| 构建工具 | Vite |
+| 后端服务 | Node.js + tsx（自定义 Express 服务） |
+| AI 模型 | Google Gemini API |
+| 动画库 | Motion (Framer Motion) |
+| 图标库 | Lucide React |
+
+---
+
+## 🚀 本地运行
+
+**环境要求：** Node.js 18+
+
+```bash
+# 1. 安装依赖
+npm install
+
+# 2. 配置 API Key
+# 复制 .env.example 为 .env.local，填入你的 Gemini API Key
+cp .env.example .env.local
+# 编辑 .env.local，设置 GEMINI_API_KEY=你的密钥
+
+# 3. 启动开发服务器
+npm run dev
+```
+
+默认访问地址：`http://localhost:3000`
+
+---
+
+## 📖 使用说明
+
+1. **选择模板**（可选）：点击左侧预设模板快速加载分析场景
+2. **填写内容**：粘贴你的视频大纲、脚本或核心观点
+3. **微调参数**：设置宏观触发词、数字锚点、受众层级等
+4. **一键生成**：点击「立即重构标的大字」，AI 自动输出三端标题矩阵
+5. **预览封面**：点击「输入沙盘」将心仪的标题投射到右侧封面模拟器
+6. **复制使用**：点击复制按钮，标题和封面文字分别复制
+
+---
+
+## ⚙️ 环境变量
+
+| 变量名 | 说明 |
+|--------|------|
+| `GEMINI_API_KEY` | Google Gemini API 密钥（必填） |
+| `APP_URL` | 应用访问地址，默认 `http://localhost:5173` |
+
+---
+
+## 📄 License
+
+Apache-2.0
